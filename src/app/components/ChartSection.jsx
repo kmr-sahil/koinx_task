@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-import Before from '../asset/before.png';
-import Bitcoin from '../asset/Bitcoin.png';
 import TradingViewWidget from '@/app/components/TradingViewWidget';
 import { TiArrowSortedUp } from "react-icons/ti";
 
@@ -15,7 +13,7 @@ function ChartSection() {
                 <div className='flex gap-[0.5rem] items-center justify-start text-[14px]'>
                     <h3 className='text-[#3E5765]'>Cryptocurrencies</h3>
                     <div>
-                        <Image src={Before} alt="before" width={10} height={10} />
+                        <Image src={'/before.png'} alt="before" width={10} height={10} />
                     </div>
                     <h3>
                         Bitcoin
@@ -26,7 +24,7 @@ function ChartSection() {
 
                     <div className='flex items-center justify-center gap-[0.5rem] font-semibold'>
                     <div>
-                        <Image src={Bitcoin} alt="before" width={32} height={10} />
+                        <Image src={'/Bitcoin.png'} alt="before" width={32} height={10} />
                     </div>
                     <h3 className='text-[#0B1426] text-[21px] '>Bitcoin</h3>
                     <span className='text-[#5D667B] text-[14px]'>BTC</span>

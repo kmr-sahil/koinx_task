@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
-import Logo from '../asset/Logo.svg'
 import { GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
@@ -36,7 +35,7 @@ function Navbar() {
             <div className='flex justify-between items-center px-[1.5rem] tablet:px-[2rem]'>
 
                 <div>
-                    <Image src={Logo} alt="Logo" width={81} height={21} />
+                    <Image src={'/Logo.svg'} alt="Logo" width={81} height={21} />
                 </div>
 
                 <div className='block tablet:hidden' onClick={toggleMenu}>

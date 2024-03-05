@@ -1,19 +1,22 @@
 "use client"
+import About from '@/app/components/About';
 import ChartSection from '@/app/components/ChartSection'
 import Navbar from '@/app/components/Navbar'
 import PerformanceSection from '@/app/components/PerformanceSection'
 import SentimentSection from '@/app/components/SentimentSection';
+import TeamProfileCard from '@/app/components/TeamProfileCard';
+import TeamSection from '@/app/components/TeamSection';
+import TokenomicsSection from '@/app/components/TokenomicsSection';
 import Image from 'next/image';
-
 
 function Page() {
 
   return (
-    <div className='flex flex-col items-center justify-center gap-[1rem] text-[1rem] text-[#0B1426] mb-[2rem]'>
+    <div className='flex flex-wrap items-start justify-between desktop:justify-center gap-0 text-[1rem] text-[#0B1426] mb-[2rem]'>
 
-        <div className='w-[100%] flex flex-col items-center justify-center gap-[1rem] text-[1rem] text-[#0B1426]'>
+        <Navbar />
 
-            <Navbar />
+        <div className='w-[100%] tablet:w-[70%] desktop:w-[881px] flex flex-col items-center justify-center gap-[1rem] text-[1rem] text-[#0B1426]'>
 
             <ChartSection />
 
@@ -31,11 +34,17 @@ function Page() {
 
             <SentimentSection />
 
-            
+            <About />
+
+            <TokenomicsSection />
+
+            <TeamSection />
 
         </div>
         
-        
+        <div className='w-[100%] tablet:w-[30%] desktop:w-[427px] h-[20rem] bg-[#0052FE] rounded-[8px] mt-[6.75rem] p-[1rem]'>
+              <div className='w-[100%] h-[10rem] bg-green-400'> </div>
+        </div>
 
 
 

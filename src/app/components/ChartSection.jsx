@@ -1,9 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image';
 import TradingViewWidget from '@/app/components/TradingViewWidget';
 import { TiArrowSortedUp } from "react-icons/ti";
 
-function ChartSection() {
+function ChartSection({data}) {
+    
+    console.log(data)
+    const [green, setGreen] = useState(true);
+
+    useEffect(() => {
+        // Update the green state based on the value of usd24hChange
+        const usd24hChange = data?.usd_24h_change !== undefined ? parseFloat(data.usd_24h_change).toFixed(2) : '';
+        if (usd24hChange < 0) {
+            setGreen(false);
+        } else {
+            setGreen(true);
+        }
+    }, [data]);
+
+    function addCommasToNumber(number) {
+        if (typeof number === 'number') {
+            return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        return '';
+    }
+
+    const formattedUsd = addCommasToNumber(data.usd);
+    const formattedInr = addCommasToNumber(data.inr);
+    const usd24hChange = data?.usd_24h_change !== undefined ? parseFloat(data.usd_24h_change).toFixed(2) : '';
+
+
   return (
     <>
         <main className='flex flex-col items-start justify-stat w-[100%] p-[1rem] gap-[1.5rem]'>
@@ -41,19 +67,20 @@ function ChartSection() {
                 <div className=' w-[100%] flex gap-[1rem] items-start justify-start flex-wrap'>
 
                 <div>
-                    <h1 className='font-semibold text-[28px] leading-tight'>$16,953.04</h1>
-                    <h3 className='text-[16px] font-medium'>₹ 13,42,343</h3>
+                    <h1 className='font-semibold text-[28px] leading-tight'>$ {formattedUsd}</h1>
+                    <h3 className='text-[16px] font-medium'>₹ {formattedInr}</h3>
                 </div>
 
                 <div className='flex items-center justify-center gap-[0.5rem]'>
 
-                    <div className='px-[0.5rem] py-[0.25rem] bg-[#EBF9F4] rounded-[4px] text-[#14B079] text-[1rem] flex items-center justify-center flex-wrap gap-[0.5rem]'> {/* inc percent div */}
+                    <div className='px-[0.5rem] py-[0.25rem] rounded-[4px] text-[1rem] flex items-center justify-center flex-wrap gap-[0.5rem]'
+                        style={{backgroundColor: `${green ? '#EBF9F4' : ''}`, color: `${green ? '#14B079' : '#F7324C'}`}}> {/* inc percent div */}
 
-                        <div className='text-[1.5rem]'>
+                        <div className='text-[1.5rem]' style={{rotate: `${green ? '' : '180deg'}`}}>
                             <TiArrowSortedUp />
                         </div>
 
-                        <h3>2.15%</h3>
+                        <h3>{usd24hChange}%</h3>
 
                     </div>
 

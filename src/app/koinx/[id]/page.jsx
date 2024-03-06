@@ -11,6 +11,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 import { FiArrowRight } from "react-icons/fi";
 import TrendingCoinSection from '@/app/components/TrendingCoinSection';
+import TrendingCarousel from '@/app/components/TrendingCarousel';
 
 function Page() {
 
@@ -84,7 +85,13 @@ function Page() {
 
         </div>
 
-      
+        <div className='flex flex-col items-start justify-stat w-[100%] gap-[1.5rem] p-[2rem] bg-white '>
+
+          <TrendingCarousel data={trendCoin} title={"You May Also Like"} />
+
+          <TrendingCarousel data={trendCoin} title={"Trending Coins"} />
+
+        </div>
 
     </div>
   )

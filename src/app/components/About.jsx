@@ -24,6 +24,8 @@ function About() {
               <br></br> <br />
               Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa vel convallis duis ac. Mi adipiscing semper scelerisque porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper dui</p>
       
+              <hr className='w-[100%] bg-[#DEE1E6] my-[1rem] '/>
+
             <div className='flex gap-[1rem] flex-wrap'>
             <div className='rounded-[8px] p-[0.75rem] w-[100%] sm:w-[388px] flex justify-start gap-[1.5rem] items-center' style={{background: 'linear-gradient(160deg, #79F1A4 0%, #0E5CAD 80%)',}}>
               <div>
@@ -51,6 +53,10 @@ function About() {
               </div>
           </div>
             </div>
+
+            <hr className='w-[100%] bg-[#DEE1E6] my-[1rem] '/>
+
+            <p className='text-[16px]'>Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa vel convallis duis ac. Mi adipiscing semper scelerisque porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper dui</p>
           
 
       </div>

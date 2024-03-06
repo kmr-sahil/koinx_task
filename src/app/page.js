@@ -1,9 +1,9 @@
-import Image from "next/image";
+import React from 'react'
 
-export default function Home() {
+function page() {
   return (
-      <div className="flex items-center justify-center">
-            <h1>Koinx task - by Sahil Kumar</h1>
-      </div>
-  );
+    <div>page</div>
+  )
 }
+
+export default page

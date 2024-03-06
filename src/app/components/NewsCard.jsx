@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function NewsCard({icon, bgColor, accColor}) {
   return (
-    <div className='flex-shrink-0 w-[319px] tablet:w-[520px] flex items-start justify-between p-[0.75rem] gap-[0.5rem] rounded-[8px] bg-[#E8F4FD]' style={{ backgroundColor: `${bgColor}` }}>
+    <div className='flex-shrink-0 w-[319px] tablet:w-[456px] flex items-start justify-between p-[0.75rem] tablet:p-[1.5rem] gap-[0.5rem] rounded-[8px] bg-[#E8F4FD]' style={{ backgroundColor: `${bgColor}` }}>
 
         <div className=' w-[30px] h-[30px] flex items-center justify-center rounded-full flex-shrink-0' style={{ backgroundColor: `${accColor}` }}>
             <Image src={`${icon}`} alt="Logo" width={15} height={12} />

@@ -4,5 +4,29 @@
 
 body {
   background-color: #EFF2F5;
-  
+}
+
+.carousel::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+@layer components {
+  .container {
+    @apply flex flex-col items-start w-[100%] p-[1rem] gap-[1.5rem];
+  }
+
+  .container-2 {
+    @apply w-[100%] p-[0.75rem] tablet:p-[1.5rem] bg-white border-[2px] border-[#DEE1E6] flex flex-col justify-center items-start gap-[1rem] rounded-[0.5rem]
+  }
+
 }

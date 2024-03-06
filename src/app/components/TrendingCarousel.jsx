@@ -15,7 +15,7 @@ function TrendingCarousel({ data,title }) {
   return (
     <>
       <h1 className='text-[24px] font-semibold'>{title}</h1>
-      <div className='overflow-auto w-[100%] flex gap-4'>
+      <div className='overflow-auto w-[100%] flex gap-4 carousel'>
         {data &&
           data.map((item, index) => (
             <div key={index} className='w-[252px] border-[1px] border-[#E3E3E3] rounded-[10px] p-[1rem] flex-shrink-0'>

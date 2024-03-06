@@ -7,9 +7,9 @@ import SubHeadWithInfo from '@/app/components/SubHeadWithInfo';
 
 function PerformanceSection() {
   return (
-    <div className='flex flex-col items-start justify-stat w-[100%] p-[1rem] gap-[1.5rem]'>
+    <div className='container'>
 
-                <div className='w-[100%] p-[0.75rem] bg-white border-[2px] border-[#DEE1E6] flex flex-col justify-center items-start gap-[1rem] rounded-[0.5rem]'>
+                <div className='container-2'>
 
                         <h1 className='text-[24px] font-semibold'>Performance</h1>
 

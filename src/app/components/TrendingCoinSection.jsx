@@ -14,7 +14,7 @@ function TrendingCoinSection({ data }) {
         <div className='w-[100%] bg-[#fff] rounded-[8px] flex flex-col gap-[1rem] p-[0.75rem] justify-center items-start'>
             <h1 className='text-[22px] font-semibold'>Trending Coins (24h)</h1>
 
-            {data.map((item, index) => (
+            {data.slice(0, 3).map((item, index) => (
                 <div className='w-[100%] flex justify-between items-center' key={index}>
                     <div className='flex gap-[0.5rem]'>
                     <img src={item?.item?.large} alt="img" width={24} height={24} />

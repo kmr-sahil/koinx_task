@@ -32,7 +32,7 @@ function ChartSection({data}) {
 
   return (
     <>
-        <main className='flex flex-col items-start justify-stat w-[100%] p-[1rem] gap-[1.5rem]'>
+        <main className='container'>
 
                 <div className='flex flex-col items-start justify-start gap-[1rem]'> {/* header title */}
 
@@ -62,7 +62,7 @@ function ChartSection({data}) {
 
                 </div>
 
-                <div className='w-[100%] p-[1.5rem] bg-white border-[2px] border-[#DEE1E6] flex flex-col justify-center items-start gap-[0.5rem] rounded-[0.5rem]'> {/* chart div */}
+                <div className='container-2'> {/* chart div */}
 
                 <div className=' w-[100%] flex gap-[1rem] items-start justify-start flex-wrap'>
 

@@ -40,11 +40,12 @@ function Page() {
 
         <Navbar />
 
-        <div className='w-[100%] tablet:w-[70%] desktop:w-[881px] flex flex-col items-center justify-center gap-[1rem] text-[1rem] text-[#0B1426] overflow-hidden'>
+        <div className='w-[100%] tablet:w-[70%] desktop:w-[881px] flex flex-col items-center justify-center gap-[0.5rem] text-[1rem] text-[#0B1426] overflow-hidden'>
 
             <ChartSection data={data} />
 
-            <div className="w-[100%] overflow-auto flex gap-[1rem] text-[1rem] font-medium ">
+            <div className='w-[100%] px-[1rem] overflow-hidden'>
+            <div className="w-[100%] overflow-auto flex gap-[1rem] text-[1rem] font-medium carousel">
                 <a className='px-[1rem] border-b-4 active:border-[#0052FE] focus:border-[#0052FE] hover:border-[#0052FE]' href="#overview">Overview</a>
                 <a className='px-[1rem] border-b-4 active:border-[#0052FE] focus:border-[#0052FE] hover:border-[#0052FE]' href="#fundamentals">Fundamentals</a>
                 <a className='px-[1rem] border-b-4 active:border-[#0052FE] focus:border-[#0052FE] hover:border-[#0052FE]' href="#newsinsight">NewsInsights</a>
@@ -53,6 +54,9 @@ function Page() {
                 <a className='px-[1rem] border-b-4 active:border-[#0052FE] focus:border-[#0052FE] hover:border-[#0052FE]' href="#technicals">Technicals</a>
                 <a className='px-[1rem] border-b-4 active:border-[#0052FE] focus:border-[#0052FE] hover:border-[#0052FE]' href="#tokenomics">Tokenomics</a>
             </div>
+            </div>
+
+            
 
             <PerformanceSection />
 
@@ -85,7 +89,7 @@ function Page() {
 
         </div>
 
-        <div className='flex flex-col items-start justify-stat w-[100%] gap-[1.5rem] p-[2rem] bg-white '>
+        <div className='hidden tablet:flex flex-col items-start justify-stat w-[100%] gap-[1.5rem] p-[2rem] tablet:p-[4rem] bg-white '>
 
           <TrendingCarousel data={trendCoin} title={"You May Also Like"} />
 

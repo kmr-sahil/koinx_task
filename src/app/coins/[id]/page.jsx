@@ -8,6 +8,7 @@ import TeamSection from '@/app/components/TeamSection';
 import TokenomicsSection from '@/app/components/TokenomicsSection';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation'
 import axios from 'axios'
 import { FiArrowRight } from "react-icons/fi";
 import TrendingCoinSection from '@/app/components/TrendingCoinSection';
@@ -15,13 +16,17 @@ import TrendingCarousel from '@/app/components/TrendingCarousel';
 
 function Page() {
 
+  const params = useParams()
+  const {id} = params
+  console.log(id)
+
   const [data, setData] = useState({})
   const [trendCoin, setTrendCoin] = useState([])
 
   useEffect(() => {
     async function getData() {
       try {
-        const response1 = await axios.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_24hr_change=true")
+        const response1 = await axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=${id}&vs_currencies=inr%2Cusd&include_24hr_change=true`)
         const response2 = await axios.get("https://api.coingecko.com/api/v3/search/trending")
         setData(response1.data.bitcoin)
         setTrendCoin((response2.data.coins).slice(0,6))

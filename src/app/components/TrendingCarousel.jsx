@@ -32,7 +32,7 @@ function TrendingCarousel({ data,title }) {
                   {parseFloat(item?.item?.data?.price_change_percentage_24h?.usd || 0).toFixed(1)}%
                 </span>
               </div>
-              <h2 className='text-[20px] font-medium'>{(item?.item?.data?.price).split('<')[0]}</h2>
+              <h2 className='text-[20px] font-medium'>{typeof item?.item?.data?.price === 'string' ? item?.item?.data?.price.split('<')[0] : item?.item?.data?.price}</h2>
               <img src={item?.item?.data?.sparkline} alt='sparkline' width={200} height={60} />
             </div>
           ))}

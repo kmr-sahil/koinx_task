@@ -54,7 +54,9 @@ function TradingViewWidget() {
 
     // Clean up the script when the component unmounts
     return () => {
-      container.current.removeChild(script);
+      if (container.current && container.current.removeChild) {
+        container.current.removeChild(script);
+      }
     };
   }, []); // Empty dependency array to run only once on mount
 
